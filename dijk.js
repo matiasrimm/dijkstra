@@ -40,10 +40,10 @@ function WeightedNegative() {
 		while(!this.queue.isEmpty()){
 			currentVertex = this.queue.dequeue().name;
 			for (vertix in thisQueue) {
-				cvw = distFromStart[currentVertex]
+				cvwPlusDist = distFromStart[currentVertex]
 					+ thisQueue[vertix].dists[currentVertex];
 				
-				if (cvw < distFromStart[thisQueue[vertix].name]) {
+				if (cvwPlusDist < distFromStart[thisQueue[vertix].name]) {
 					distFromStart[thisQueue[vertix].name] = cvw;
 					prev[thisQueue[vertix].name] = currentVertex;
 					this.queue.enqueue(thisQueue[vertix].name, thisQueue[vertix].dists);
