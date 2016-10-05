@@ -1,4 +1,4 @@
-function Queue () {
+﻿function Queue () {
 	this.q = [];
 	this.getQueue = function () {
 		return this.q;
@@ -44,7 +44,7 @@ function WeightedNegative() {
 					+ thisQueue[vertix].dists[currentVertex];
 				
 				if (cvwPlusDist < distFromStart[thisQueue[vertix].name]) {
-					distFromStart[thisQueue[vertix].name] = cvw;
+					distFromStart[thisQueue[vertix].name] = cvwPlusDist;
 					prev[thisQueue[vertix].name] = currentVertex;
 					this.queue.enqueue(thisQueue[vertix].name, thisQueue[vertix].dists);
 				}
