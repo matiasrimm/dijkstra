@@ -1,4 +1,4 @@
-﻿function Queue () {
+﻿function NameDistQueue () {
 	this.q = [];
 	this.getQueue = function () {
 		return this.q;
@@ -17,10 +17,10 @@
 	}
 }
 
-function WeightedNegative() {
-	this.queue = new Queue();
+function WeightedNegativeDijkstra() {
+	this.queue = new NameDistQueue();
 
-	this.addV = function (name, dists) {
+	this.enqueue = function (name, dists) {
 		this.queue.enqueue(name, dists);
 	}
 
@@ -59,7 +59,6 @@ function WeightedNegative() {
 			}
 		}
 
-
 		var x = end;
 		ansOrder.push(end);
 		while(prev[x]) {
@@ -72,5 +71,6 @@ function WeightedNegative() {
 
 		console.log(ansWrap.dist + " ja " + ansWrap.order)
 
+		return ansWrap;
 	}
 }
