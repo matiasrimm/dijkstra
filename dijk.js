@@ -69,7 +69,7 @@ function WeightedNegativeDijkstra() {
 		ansWrap.dist = distFromStart[end];
 		ansWrap.order = ansOrder;
 
-		console.log(ansWrap.dist + " ja " + ansWrap.order)
+		//console.log(ansWrap.dist + " ja " + ansWrap.order)
 
 		return ansWrap;
 	}
