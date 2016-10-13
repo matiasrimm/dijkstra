@@ -1,0 +1,47 @@
+<div>
+  <h1 ng-click="initMap()">Navi</h1>
+  <input type="text" ng-model="startCity">
+  <input type="text" ng-model="endCity">
+  <button class="btn" ng-click="searchRoute()">Hae</button>
+</div>
+
+<div>
+  <h2>Matkan pituus: {{distance}}</h2>
+  <h2>Reitti: {{route}}</h2>
+</div>
+<!--
+
+Hidden map
+
+<div>
+  <canvas id="map" width="400" height="550" style="border:1px solid #000000;">
+  </canvas>
+</div>
+
+<div id=title>Cities in databse</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <th>City</th>
+      <th>CoordX</th>
+      <th>CoordY</th>
+      <th>Neighbours</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="city in cities">
+      <td>{{city.name}}</td>
+      <td>{{city.coordX}}</td>
+      <td>{{city.coordY}}</td>
+      <td><span ng-repeat="neighbour in city.neighbours">{{neighbour.name}} </span></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+-->
+
+<br><br><br>
+<div>
+  <h4>Kaupungit</h4>
+  <p ng-repeat="city in cities">{{city.name}}</p>
+</div>
